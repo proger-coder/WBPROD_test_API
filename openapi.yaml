@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: WBPROD_test_API
+  version: 1.0.0
+  contact:
+    name: Ayrat Sungatullin
+    url: https://github.com/proger-coder/wordsComparer
+    email: dimanvaz04@gmail.com
+servers:
+  - url: http://localhost:2022
+  - url: http://localhost:2023
+paths:
+  /getData:
+    get:
+      summary: Получить данные
+      responses:
+        '200':
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /postData:
+    post:
+      summary: Отправить данные
+      responses:
+        '200':
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /putData:
+    put:
+      summary: Обновить данные
+      responses:
+        '200':
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+  /deleteData:
+    delete:
+      summary: Удалить данные
+      responses:
+        '200':
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataResponse'
+        '404':
+          $ref: '#/components/responses/NotFound'
+components:
+  schemas:
+    DataResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        method:
+          type: string
+        data:
+          type: string
+        error:
+          type: string
+  responses:
+    NotFound:
+      description: Запрос к несуществующему ресурсу
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DataResponse'
