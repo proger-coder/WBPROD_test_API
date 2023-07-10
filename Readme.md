@@ -31,5 +31,9 @@ npm run start
 
 ## Автор
 
-Айрат Сунгатуллин 
-https://github.com/proger-coder
+| Имя | Контакты |
+| --- | --- |
+| Айрат Сунгатуллин | [Telegram](https://t.me/Ayra_t) |
+|  | [GitHub](https://github.com/proger-coder) |
+|  | [HeadHunter](https://naberezhnye.hh.ru/resume/af58af35ff0b6dd9310039ed1f6f6354696b75) |
+
